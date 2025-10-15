@@ -1,0 +1,168 @@
+/* ======== Estilos gerais ======== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ffcc70, #ff7eb3);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #222;
+}
+
+header p {
+    color: #444;
+    margin-top: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#fact-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 700px;
+    width: 90%;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#fact-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+#fact-text {
+    font-size: 1.2rem;
+    color: #222;
+    line-height: 1.5;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    background-color: #ff7eb3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff4b8a;
+    transform: scale(1.05);
+}
+
+#cat-img {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+#cat-img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 10px;
+    background: rgba(255,255,255,0.3);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ======== Responsividade ======== */
+
+/* 📱 Smartphones pequenos */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    #fact-text {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 80%;
+        font-size: 1rem;
+    }
+
+    #cat-img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* 📲 Tablets (modo retrato e paisagem) */
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background: linear-gradient(135deg, #ffd580, #ff8fb1);
+    }
+
+    #fact-section {
+        max-width: 80%;
+        padding: 30px;
+    }
+
+    #fact-text {
+        font-size: 1.3rem;
+    }
+
+    #cat-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    button {
+        padding: 14px 35px;
+        font-size: 1.2rem;
+    }
+}
+
+/* 💻 Monitores grandes */
+@media (min-width: 1025px) {
+    main {
+        flex-direction: column;
+    }
+
+    #fact-section {
+        max-width: 700px;
+    }
+
+    #cat-img {
+        width: 280px;
+        height: 280px;
+    }
+}
